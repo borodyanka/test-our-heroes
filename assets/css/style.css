@@ -1,0 +1,40 @@
+/* Книжковий меморіальний дизайн */
+body {
+    background-color: #f5f4ef;
+    color: #1a1a1a;
+}
+
+.hero-card {
+    transition: transform 0.2s ease, box-shadow 0.2s ease, border-color 0.2s ease;
+    background-color: #ffffff;
+    border-color: #d8d6d0;
+}
+
+.hero-card:hover {
+    transform: translateY(-3px);
+    border-color: #999999;
+    box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.04);
+}
+
+input, button {
+    transition: background-color 0.2s ease, border-color 0.2s ease, color 0.2s ease;
+}
+
+button:focus-visible, a:focus-visible {
+    outline: 2px solid #444444;
+    outline-offset: 4px;
+}
+
+/* Приховування працює навіть до завантаження Tailwind. */
+.hidden {
+    display: none;
+}
+
+@media (prefers-reduced-motion: reduce) {
+    .hero-card, input, button {
+        transition: none;
+    }
+    .hero-card:hover {
+        transform: none;
+    }
+}
